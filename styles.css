@@ -42,3 +42,137 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* begin css styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* root styles */
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9826B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+    --fonts: Montserrat, Mole, sans-serif;
+}
+html {
+    background-color:#FFFFFF;
+    width: 414px;
+    margin: 0 auto;
+}
+body {
+    font-family: var(--fonts);
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 0 20px;
+}
+/* ----- SKIP LINK STYLES ----- */
+#skip{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+ #skip:focus {
+	position: static;
+	width: auto;
+	height: auto;
+}
+/* screen reader styles */
+.sr-only{
+    visibility: hidden;
+}
+h1, h2, h3{
+    font-family: 'Molle', cursive;
+    text-align: left;
+    padding-left: 30px;
+}
+h1{
+    font-size: 42px;
+    line-height: .9em;
+}
+header{
+    background: linear-gradient(to bottom, rgba(85, 188, 213, 0.9), rgba(255, 255, 255));
+}
+header p{
+    font-size: 17px;
+    width: 320px;
+    padding-bottom: 40px;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-variation-settings: 'wght' 300;
+    line-height: 1.5em;
+    padding-left: 30px;
+}
+.header{
+    display: flex;
+}
+#logo img{
+    width: 140px;
+}
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;  
+    z-index: 1;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#intro h2{
+    font-size: 32px;
+    padding-bottom: 7px;
+}
+#intro p{
+    font-size: 13px;
+    width: 315px;
+    line-height: 1.75em;
+    font-variation-settings: 'wght' 280;
+    padding-bottom: 10px;
+}
+#img-grid img{
+    width: 100%;
+    padding-bottom: 15px;
+}
+#plan{
+    background-color: var(--yellow);
+}
+#plan div{
+    padding-left: 32px;
+}
+#plan h3{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+#plan section{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    justify-content: center;
+}
+/* #plan section{
+    display: grid;
+    justify-content: center;
+    border: 1px solid var(--white);
+    padding:20px;
+    width: 310px;
+    background-color: var(--teal);
+}
+#plan img{
+    align-items: center;
+    padding-bottom: 5px;
+    
+} */
+
