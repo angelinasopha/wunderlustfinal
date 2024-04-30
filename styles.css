@@ -190,19 +190,6 @@ p{
     margin: 0 auto;
     width: 45%;
 }
-/* #plan section{
-    display: grid;
-    justify-content: center;
-    border: 1px solid var(--white);
-    padding:20px;
-    width: 310px;
-    background-color: var(--teal);
-}
-#plan img{
-    align-items: center;
-    padding-bottom: 5px;
-    
-} */
 #toggle {
     display: none;
 }
@@ -213,7 +200,7 @@ nav{
 nav label {
     position: absolute;
     top: 20px;
-    left: 60px;
+    left: 71px;
     cursor: pointer;
     padding: 13px 67.5px;
     background-color: var(--yellow);
@@ -221,7 +208,6 @@ nav label {
     text-transform: uppercase;
     font-variation-settings: 'wght' 600;
     font-size: 12px;
-    
 }
 /* Hide the navigation menu by default */
 nav ul {
@@ -231,6 +217,25 @@ nav ul {
 #toggle:checked + label + ul {
     display: block;
 }
+/* dropdown styles */
+#menu-toggle ul {
+    width: 414px; /* Set the width of the dropdown */
+    background-color: var(--teal); /* Background color */
+    padding: 10px; /* Add padding */
+    list-style-type: none; /* Remove list styles */
+    margin: 0; /* Remove default margin */
+    width: calc(100% - 20px);
+    left: 50%;
+}
+#menu-toggle ul li {
+    display: block; /* Display list items as blocks */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 20px 0; /* Add padding */
+    border-bottom: 1px solid #ddd; /* Add border bottom */
+}
+/* end dropdown styles */
 /* start of testimonies */
 #testimonials{
     padding-bottom: 5px;
@@ -445,4 +450,189 @@ footer{
     gap: 20px;
     font-size: 14px;
     padding-bottom: 20px;
+}
+footer a{
+    text-decoration: none;
+}
+/* begin screen styles */
+@media screen and (min-width:698px){
+    html{
+        width: 698px;
+    }
+    h2, h3 {
+        padding-left: 50px;
+    }
+    p{
+        padding-left: 50px;
+    }
+    #logo img {
+        width: 200px;
+    }
+    .header{
+        padding-top: 25px;
+        padding-bottom: 5px;
+    }
+    /* getting nav to appear */
+    #menu-toggle ul li{
+        display: flex; /* Override display property */
+        flex-direction: column;
+        visibility: visible;
+        padding: 2px;
+        border: 1px solid #FFFFFF;
+        font-size: 12px;
+        font-variation-settings: 'wght' 500;
+    }
+    nav ul {
+        display: flex; /* Display the navigation items as flex items */
+        justify-content: space-around;
+        gap: 20px;
+    }
+    #menu-toggle ul{
+        background-color: transparent;
+    }
+    #menu-toggle{
+        position: absolute;
+        right:25px;
+    }
+    #menu-toggle ul li{
+        background-color: var(--white);
+        padding: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%
+    }
+    nav a{
+        text-decoration: none;
+        width: 85px;
+        color:#000000;
+        font-variation-settings: 'wght' 550;
+    }
+    .active li{
+        background-color: var(--yellow);
+    }
+    #menu-toggle label{
+        display: none;
+    }
+    nav{
+        position: relative;  
+        top: 90px;  
+        width: 600px;  
+        padding-top: 10px; 
+    }
+    h1{
+        position: relative;
+        top: -90px;
+        left: 170px;
+    }
+    header p{
+        width: 380px;
+        position: relative;
+        top: -80px;
+        left: 150px;
+        font-size: 14px;
+    }
+    #intro p {
+        width: 640px;
+        padding-bottom: 5px;
+    }
+    /* image grid styles */
+    #img-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        scale: 90%;
+        align-items: center;
+        margin-top: -20px;
+    }
+    
+    #img-grid img {
+        width: 100%; /* Ensure images take up full width of their container */
+        height: 240px;
+        padding-bottom: 0;
+    }
+    
+    /* Make the third image span across both columns */
+    #img-grid picture {
+        grid-column: span 2;
+    }
+    /* plan section styles */
+    #plan div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        scale: 85%;
+        padding-left: 3px;
+        margin-top: -40px;
+        padding-bottom: 0;
+    }
+    /* testimonials stlyes */
+    #testimonials div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    #testimonials section{
+        text-align: center;
+        padding: 10px;
+    }
+    #testimonials h4 {
+        text-align: center;
+        width: 100%;
+    }
+    #testimonials img{
+        width: 60%;
+    }
+    #testimonials q{
+        width: 100%;
+    }
+    /* about destination styles */
+    #about div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 10px;
+    }
+    #about h3{
+        padding-bottom: 5px;
+    }
+    /* contact form styles */
+    form{
+        width: 560px;
+    }
+    input[type=submit]{
+        width: 230px;
+        margin-left: 330px;
+        margin-top: 35px;
+    }
+    fieldset {
+        display: flex;
+    }
+    /* footer styles */
+    footer {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        gap: 0px;
+        padding-left: 30px;
+    }
+    footer a {
+        flex-basis: 33%;
+        text-align: center;
+    }
+    footer p {
+        padding-left: 0;
+    }
+@media screen and (min-width:1024px){
+    html{
+        width:1024px;
+    }
+    nav{
+        position: relative;
+        top:-60px;
+        left: 312px;
+        scale: 70%
+    }
+}
 }
