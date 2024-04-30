@@ -472,13 +472,13 @@ footer a{
         padding-top: 25px;
         padding-bottom: 5px;
     }
+
     /* getting nav to appear */
     #menu-toggle ul li{
         display: flex; /* Override display property */
         flex-direction: column;
         visibility: visible;
         padding: 2px;
-        border: 1px solid #FFFFFF;
         font-size: 12px;
         font-variation-settings: 'wght' 500;
     }
@@ -492,23 +492,30 @@ footer a{
     }
     #menu-toggle{
         position: absolute;
-        right:25px;
+        right:28px;
+        top:0px;
     }
-    #menu-toggle ul li{
+    #menu-toggle ul li:not(:first-child){
         background-color: var(--white);
         padding: 15px;
         padding-left: 20px;
         padding-right: 20px;
         width: 100%
     }
+   li.active{
+        background-color: var(--yellow);
+        width: 125px;
+    }
+    .active a{
+        padding: 10px;
+        width: 110px;
+        margin-top: 3px;
+    }
     nav a{
         text-decoration: none;
         width: 85px;
         color:#000000;
         font-variation-settings: 'wght' 550;
-    }
-    .active li{
-        background-color: var(--yellow);
     }
     #menu-toggle label{
         display: none;
@@ -634,5 +641,87 @@ footer a{
         left: 312px;
         scale: 70%
     }
-}
+    #intro p{
+        width: 450px;
+    }
+    #img-grid{
+        margin-top: -250px;
+        width: 615px;
+        margin-left: 412px;
+        scale: 80%;
+    }
+    #plan h3{
+        padding-top: 50px;
+    }
+    #plan div{
+        grid-template-columns: repeat(4, 1fr); /* Change to a 1x4 grid */
+        gap: 10px;
+        width: 174px;
+        scale: 75%;
+    }
+    #plan section{
+        margin-bottom: 40px;
+    }
+    #testimonials div{
+        grid-template-columns: repeat(4, 1fr); /* Change to a 1x4 grid */
+        gap: 10px;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #about div{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #names {
+        position: relative;
+        right: 160px;
+    }
+    #nums fieldset{
+        position: relative;
+        left: -2px;
+        width: 60%;
+        top: -8px;
+        padding-bottom: 10px;
+    }
+    #contact input{
+        width: 40%;
+    }
+    #nums{
+        position: relative;
+        left: 89px;
+        top: -189px;
+    }
+    #nums input[type="radio"] {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    #nums input{
+        width: 58%;
+    }
+    #selects select{
+        width: 50%;
+    }
+    #selects{
+        position: relative;
+        top: -485px;
+        left: 448px;
+    }
+    input[type=submit]{
+        margin-left: 70px;
+        scale: 85%;
+    }
+    #contact{
+        height: 400px;
+    }
+    #contact form{
+        height: 200px;
+    }
+    #footer p{
+        position: relative;
+        left: 0px;
+    }
+    }
 }
