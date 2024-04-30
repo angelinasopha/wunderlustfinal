@@ -216,24 +216,41 @@ nav ul {
 /* Show the navigation menu when the checkbox is checked */
 #toggle:checked + label + ul {
     display: block;
+    position: relative;
+    left: -140px;
+    width: 374px;
+    top: 50px;
 }
 /* dropdown styles */
 #menu-toggle ul {
-    width: 414px; /* Set the width of the dropdown */
-    background-color: var(--teal); /* Background color */
-    padding: 10px; /* Add padding */
-    list-style-type: none; /* Remove list styles */
-    margin: 0; /* Remove default margin */
+    width: 414px;
+    background-color: var(--teal);
+    padding: 10px;
+    list-style-type: none;
+    margin: 0;
     width: calc(100% - 20px);
     left: 50%;
 }
 #menu-toggle ul li {
-    display: block; /* Display list items as blocks */
+    display: block; 
     text-align: center;
     text-transform: uppercase;
     font-size: 14px;
-    padding: 20px 0; /* Add padding */
-    border-bottom: 1px solid #ddd; /* Add border bottom */
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+#toggle:checked + label {
+    position: absolute;
+    top: 18px; 
+    left: -140px;
+    text-align: center;
+    background-color: #000000;
+    color:#FFFFFF;
+}
+#menu-toggle a{
+    text-decoration: none;
+    color:#000000;
+    font-variation-settings: 'wght' 550;
 }
 /* end dropdown styles */
 /* start of testimonies */
@@ -398,7 +415,6 @@ input{
 	border: 3px solid var(--purple);
 	height: 1.5em;
 }
-
 fieldset{
 	display: grid;
 	grid-template-columns: 1fr;
@@ -634,6 +650,9 @@ footer a{
 @media screen and (min-width:1024px){
     html{
         width:1024px;
+    }
+    header p{
+        width: 600px;
     }
     nav{
         position: relative;
